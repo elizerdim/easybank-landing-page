@@ -57,12 +57,68 @@ button {
   justify-content: space-between;
   padding: 5%;
   position: fixed;
+  z-index: 1;
   background-color: white;
   width: 100%;
 }
 
+#menu-button > div {
+  width: 24px;
+  height: 1px;
+  background-color: #2D314D;
+  margin-bottom: 4px;
+  transform: rotate(0deg) translateY(0px);
+  opacity: 1;
+  transition: .2s linear;
+}
+
+#menu-button.close-position > div:nth-of-type(1) {
+  transform: rotate(45deg) translateY(-5px);
+  transform-origin: left;
+}
+
+#menu-button.close-position > div:nth-of-type(2) {
+  opacity: 0;
+}
+
+#menu-button.close-position > div:nth-of-type(3) {
+  transform: rotate(-45deg) translateY(5px);
+  transform-origin: left;
+}
+
+#nav-container.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s, opacity .5s ease-in-out; 
+}
+
+img.hidden {
+  visibility: hidden;
+}
+
 .primary-header nav {
-  display: none;
+  background-color: #FFFFFF;
+  color: #2D314D;
+  font-size: 1.8rem;
+  width: 90%;
+  text-align: center;
+  line-height: 2.5em;
+  padding: 5% 0;
+  margin: 7% 5% 0%;
+  border-radius: 3px;
+}
+
+#nav-container {
+  position: absolute;
+  background: linear-gradient(to bottom, #2D314D, #2D314D00);
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility .5s, opacity .5s ease-in-out; 
 }
 
 .primary-header .request-invite-btn {

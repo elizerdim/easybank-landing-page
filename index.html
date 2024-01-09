@@ -10,27 +10,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   
+  <script src="./script.js" defer></script>
+  
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
 <body>
   <header class="primary-header">
     <a href="#" class="logo"><img src="./images/logo.svg" alt="Company Logo"></a>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </nav>
+    <div id="nav-container" class="hidden">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </nav>
+    </div>
     <button class="request-invite-btn">Request Invite</button>
-    <button><img src="./images/icon-hamburger.svg" alt=""></button>
+    <button id="menu-button">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
   </header>
   <main>
     <section class="section-one">
       <div class="phone-mockup-background">
-        <img class="phone-mockup" src="./images/image-mockups.png" alt="Smart Phones with Company App on the Screen">
+        <img id="phone-mockup" class="phone-mockup" src="./images/image-mockups.png" alt="Smart Phones with Company App on the Screen">
       </div>
       <h1>Next generation digital banking</h1>
       <p>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
